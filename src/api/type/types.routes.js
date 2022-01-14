@@ -1,7 +1,7 @@
 const TypeRoutes = require('express').Router()
 const { isAuth } = require('../../middlewares/auth')
 const upload = require('../../middlewares/file')
-const { postNewType, getAllTypes, getType, deleteType } = require('./Types.controller')
+const { postNewType, getAllTypes, getType, deleteType } = require('./types.controller')
 
 
 TypeRoutes.get('/', getAllTypes)
