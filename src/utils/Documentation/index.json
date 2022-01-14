@@ -1,0 +1,154 @@
+{
+  "user": [
+    {
+      "endpoint": "http://localhost:5000/api/users",
+      "action": "Register",
+      "method": "POST",
+      "request": {
+        "name": "Ricardo",
+        "email": "ricardo@ricardo.com",
+        "password": "Aa123456*",
+        "age": 29
+      },
+      "response": {
+        "name": "Ricardo",
+        "email": "ricardo@ricardo.com",
+        "age": "29"
+      }
+    },{
+        "endpoint": "http://localhost:5000/api/users/login",
+        "action": "Login",
+        "method":"POST",
+        "request":{
+          "email": "ricardo@ricardo.com",
+        "password": "Aa123456*"
+        },
+        "response": {
+          "token": ""
+        }
+    },{
+      "endpoint": "http://localhost:5000/api/users/logout",
+      "action": "logout",
+      "method": "POST",
+      "request": "",
+      "response":"null"
+    },{
+      "endpoint": "http://localhost:5000/api/users/:id",
+      "action": "Seach user by Id",
+      "method": "GET"
+    }
+    
+  ],
+  "games": [
+    {
+      "endpoint": "http://localhost:5000/api/games",
+      "action": "Get ALL the games",
+      "method": "GET",
+      "request": "",
+      "response":"Array with all the games"
+    },{
+      "endpoint": "http://localhost:5000/api/games/years",
+      "action": "Get ALL the games sorted by years lower to higher",
+      "method": "GET",
+      "request": "",
+      "response":"Array with all the games sorted by years"
+    },{
+      "endpoint": "http://localhost:5000/api/games/years/:id(year)",
+      "action": "Get the games with the year",
+      "method": "GET",
+      "request": "",
+      "response":"Array with all the games with the year"
+    },{
+      "endpoint": "http://localhost:5000/api/games/:id(game id)",
+      "action": "Get the games with the id",
+      "method": "GET",
+      "request": "",
+      "response":"Game u searched with the id"
+    },{
+      "endpoint": "http://localhost:5000/api/games",
+      "action": "Post a new game",
+      "method": "POST",
+      "request": {
+        "name":"Name of the game",
+        "img":"image",
+        "type":"id of the type",
+        "year":"year of the game",
+        "character":"Character, character",
+        "platform":["ids of the platforms","ids of the platforms"]
+      },
+      "response":{
+        "type": "",
+        "platform": ["ids of the platforms","ids of the platforms"],
+        "_id": "it returns the id generated for that game",
+        "name": "Name of the game",
+        "year": "year of the game",
+        "characters": "characters of the game",
+        "img": "url of the img posted on cloudinary",
+        "__v": 0
+      }
+    },{
+      "endpoint": "http://localhost:5000/api/games/:id(game id)",
+      "action": "Patch a game",
+      "method": "PATCH",
+      "request": { 
+        "token": "TOKEN IS REQUIRED",
+        "paramToChange1": "new content 1",
+        "paramToChange2": "new content 2"
+      },
+      "response":{
+        "new": {
+          "paramToChange1": "new content 1",
+          "paramToChange2": "new content 2"
+        },
+        "old": {
+          "_id": "it returns the id generated for that game",
+          "name": "Name of the game",
+          "type": "Type of the game",
+          "year": "year of the game",
+          "characters": "characters of the game",
+          "img": "url with the img of the game",
+          "__v": 0
+        }
+      }
+    }
+  ],"types": [
+    {
+      "endpoint": "http://localhost:5000/api/types",
+      "action": "Get all the types of the games",
+      "method": "GET",
+      "request": "",
+      "response":"Array with all the types of the games"
+    },{
+      "endpoint": "http://localhost:5000/api/types/:id(type id)",
+      "action": "Get the type of the id",
+      "method": "GET",
+      "request": "",
+      "response":"Array with the type of the id"
+    }
+  ], "platform" :[
+    {
+      "endpoint": "http://localhost:5000/api/platforms",
+      "action": "Get all the platforms",
+      "method": "GET",
+      "request": "",
+      "response":"Array with all the platforms"
+    },{
+      "endpoint": "http://localhost:5000/api/platforms/:id(platform id)",
+      "action": "Get all the platform of the id",
+      "method": "GET",
+      "request": "",
+      "response":"Array with the platform of the id"
+    },{
+      "endpoint": "http://localhost:5000/api/platforms/",
+      "action": "Post new platform",
+      "method": "POST",
+      "request": {
+        "name": "name of the new platform"
+      },
+      "response":{
+        "_id": "id generated for the new platform",
+	      "name": "name of the new platform"
+      }
+    }
+  ]
+}
