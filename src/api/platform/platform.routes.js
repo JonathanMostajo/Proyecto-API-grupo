@@ -1,7 +1,7 @@
 const PlatformRoutes = require('express').Router()
 const { isAuth } = require('../../middlewares/auth')
 const upload = require('../../middlewares/file')
-const { postNewPlatform, getAllPlatforms, getPlatform} = require('./Platforms.controller')
+const { postNewPlatform, getAllPlatforms, getPlatform} = require('./platforms.controller')
 
 
 PlatformRoutes.get('/', getAllPlatforms)
