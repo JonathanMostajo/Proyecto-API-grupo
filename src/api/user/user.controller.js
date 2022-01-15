@@ -1,7 +1,7 @@
 const User = require('./user.model')
 const bcrypt = require('bcrypt')
 const { setError } = require('../../utils/error/error')
-const { generateSign, verifyJwt } = require('../../utils/jwt/jwtUtils')
+const { generateSign } = require('../../utils/jwt/jwtUtils')
 
 const postNewUser = async (req, res, next) => {
     try {

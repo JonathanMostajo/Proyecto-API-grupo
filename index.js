@@ -1,11 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const cloudinary = require('cloudinary').v2
+const documentation = require('./src/utils/Documentation/index.json')
 const UserRoutes = require('./src/api/user/user.routes');
 const GameRoutes = require('./src/api/games/games.routes');
 const PlatformRoutes = require('./src/api/platform/platform.routes');
 const TypeRoutes = require('./src/api/type/types.routes');
-const Documentation = require('./src/utils/Documentation/index.json')
+
 //AQUI REQUERIMOS LAS RUTAS
 
 const { setError } = require('./src/utils/error/error');
@@ -42,14 +43,16 @@ app.use(express.json({
 
 app.use(express.urlencoded({ limit: '5mb', extended: true }))
 
-//AQUI VAN LAS RUTAS
+
+
+
 app.use('/api/users', UserRoutes)
 app.use('/api/games', GameRoutes)
 app.use('/api/platforms', PlatformRoutes)
 app.use('/api/types', TypeRoutes)
-//JUSTO AQUI!!!
+
 app.use('/', (req, res, next) => {
-    return res.json(Documentation)
+    return res.json(documentation)
 })
 
 app.use('*', (req, res, next) => {

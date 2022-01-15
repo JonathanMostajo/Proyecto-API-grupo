@@ -1,7 +1,7 @@
 {
   "user": [
     {
-      "endpoint": "http://localhost:5000/api/users",
+      "endpoint": "/api/users",
       "action": "Register",
       "method": "POST",
       "request": {
@@ -16,7 +16,7 @@
         "age": "29"
       }
     },{
-        "endpoint": "http://localhost:5000/api/users/login",
+        "endpoint": "/api/users/login",
         "action": "Login",
         "method":"POST",
         "request":{
@@ -27,13 +27,13 @@
           "token": ""
         }
     },{
-      "endpoint": "http://localhost:5000/api/users/logout",
+      "endpoint": "/api/users/logout",
       "action": "logout",
       "method": "POST",
       "request": "",
       "response":"null"
     },{
-      "endpoint": "http://localhost:5000/api/users/:id",
+      "endpoint": "/api/users/:id",
       "action": "Seach user by Id",
       "method": "GET"
     }
@@ -41,31 +41,31 @@
   ],
   "games": [
     {
-      "endpoint": "http://localhost:5000/api/games",
+      "endpoint": "/api/games",
       "action": "Get ALL the games",
       "method": "GET",
       "request": "",
       "response":"Array with all the games"
     },{
-      "endpoint": "http://localhost:5000/api/games/years",
+      "endpoint": "/api/games/years",
       "action": "Get ALL the games sorted by years lower to higher",
       "method": "GET",
       "request": "",
       "response":"Array with all the games sorted by years"
     },{
-      "endpoint": "http://localhost:5000/api/games/years/:id(year)",
+      "endpoint": "/api/games/years/:id(year)",
       "action": "Get the games with the year",
       "method": "GET",
       "request": "",
       "response":"Array with all the games with the year"
     },{
-      "endpoint": "http://localhost:5000/api/games/:id(game id)",
+      "endpoint": "/api/games/:id(game id)",
       "action": "Get the games with the id",
       "method": "GET",
       "request": "",
       "response":"Game u searched with the id"
     },{
-      "endpoint": "http://localhost:5000/api/games",
+      "endpoint": "/api/games",
       "action": "Post a new game",
       "method": "POST",
       "request": {
@@ -87,7 +87,7 @@
         "__v": 0
       }
     },{
-      "endpoint": "http://localhost:5000/api/games/:id(game id)",
+      "endpoint": "/api/games/:id(game id)",
       "action": "Patch a game",
       "method": "PATCH",
       "request": { 
@@ -113,13 +113,13 @@
     }
   ],"types": [
     {
-      "endpoint": "http://localhost:5000/api/types",
+      "endpoint": "/api/types",
       "action": "Get all the types of the games",
       "method": "GET",
       "request": "",
       "response":"Array with all the types of the games"
     },{
-      "endpoint": "http://localhost:5000/api/types/:id(type id)",
+      "endpoint": "/api/types/:id(type id)",
       "action": "Get the type of the id",
       "method": "GET",
       "request": "",
@@ -127,19 +127,19 @@
     }
   ], "platform" :[
     {
-      "endpoint": "http://localhost:5000/api/platforms",
+      "endpoint": "/api/platforms",
       "action": "Get all the platforms",
       "method": "GET",
       "request": "",
       "response":"Array with all the platforms"
     },{
-      "endpoint": "http://localhost:5000/api/platforms/:id(platform id)",
+      "endpoint": "/api/platforms/:id(platform id)",
       "action": "Get all the platform of the id",
       "method": "GET",
       "request": "",
       "response":"Array with the platform of the id"
     },{
-      "endpoint": "http://localhost:5000/api/platforms/",
+      "endpoint": "/api/platforms/",
       "action": "Post new platform",
       "method": "POST",
       "request": {

@@ -8,7 +8,7 @@ const GameSchema = new Schema({
     year: {type: Number, required: true, trim:true},
     characters: {type: String, required: true, trim:true},
     platform: [{type: Schema.Types.ObjectId, ref: "platform", required: true}]
-}, {timestamp: true, collection: 'games'})
+}, {timestamps: true})
 
 const Game = mongoose.model('game', GameSchema)
 module.exports = Game
