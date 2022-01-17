@@ -8,7 +8,7 @@ GameRoutes.get('/', getAllGames)
 GameRoutes.get('/years/', getAllGamesSorted)
 GameRoutes.get('/years/:id', getGamesFiltered)
 GameRoutes.get('/:id', getGame)
-GameRoutes.post('/', [isAuth], upload.single('img'), postNewGame)
+//GameRoutes.post('/', [isAuth], upload.single('img'), postNewGame)
 //GameRoutes.patch('/:id', [isAuth], upload.single('img'), patchGame)
 
 

@@ -45,7 +45,7 @@ const getAllGamesSorted = async (req, res, next) => {
 const getGamesFiltered = async (req, res, next) => {
     try {
         const { id } = req.params
-        const gamesDB = await (await Game.find({ year: id }).populate('platform').populate('type'))
+        const gamesDB = await Game.find({ year: id }).populate('platform').populate('type')
         console.log(gamesDB)
         /* const gameFiltered = gamesDB.filter(game => game.year >= id) */
         res.status(200).json(gamesDB)
